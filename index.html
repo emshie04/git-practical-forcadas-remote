@@ -4,12 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        let p = document.getElementById('parag1');
-        let b1 = document.querySelector('btn1');
-        let b2 = document.querySelector('btn2');
-        
-    </script>
 </head>
 <body>
     
@@ -25,7 +19,19 @@
         </div>
     </form>
     <p id="parag1">This is my practical examination</p>
-    <button type="button" id="btn1">Alert me</button>
-    <button type="button" id="btn2">Change Color</button>
+    <button id="btn1">Alert me</button>
+    <button id="btn2">Change Color</button>
 </body>
+<script>
+        let p = document.getElementById("parag1");
+        const b1 = document.querySelector("#btn1");
+        const b2 = document.querySelector("#btn2");
+        
+        b1.addEventListener('click', function(){
+            alert('Button 1 triggered');
+        })
+        b2.addEventListener('dblclick', function(){
+            p.style.color += "red";
+        })
+    </script>
 </html>
